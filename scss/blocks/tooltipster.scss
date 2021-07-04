@@ -1,0 +1,21 @@
+.tooltip_templates {
+    display: none;
+}
+.tooltipster-sidetip.custom-theme .tooltipster-box {
+    border-radius: 0;
+    border: none;
+    background: #fd8238;
+}
+.tooltipster-sidetip.custom-theme .tooltipster-content {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    p {
+        span {
+            font-weight: 600;
+        }
+    }
+}
+.tooltipster-sidetip.custom-theme .tooltipster-arrow {
+    display: none;
+}

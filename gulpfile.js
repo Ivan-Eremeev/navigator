@@ -6,7 +6,7 @@
 
 // * Настройки *
 const preprocessor = 'scss', // Выбрать препроцессор для стилей (scss или less)
-  jsOn = true; // Нужно ли компилировать js
+  jsOn = false; // Нужно ли компилировать js
 
 // * Пути к папкам относительно корня проекта *
 const scssPath = 'scss', // Scss

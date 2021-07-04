@@ -4,13 +4,111 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
+
   <title>Navigator</title>
 </head>
 <body>
-  
-  
 
+  <div class="wrapper">
+
+    <!-- welcomescreen -->
+    <div class="welcomescreen">
+      <div class="welcomescreen__container">
+        <div class="welcomescreen__swiper-container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="welcomescreen__pagination"></div>
+      </div>
+    </div>
+    <!-- /welcomescreen -->
+
+    <!-- portfolio -->
+    <div class="portfolio">
+      <div class="container">
+        <div class="portfolio__title">
+          <h2>Наши работы</h2>
+        </div>
+        <div class="portfolio__container">
+          <div class="portfolio__swiper-container swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image1.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image2.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image3.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image4.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__button-prev swiper-button-prev"></div>
+          <div class="portfolio__button-next swiper-button-next"></div>
+        </div>
+        <div class="tooltip_templates">
+          <div id="tooltip1">
+            <p><span>Клиент:</span></p>
+            <p>Полярные авиалинии</p>
+            <p><span>Тираж:</span></p>
+            <p>200 шт</p>
+            <p><span>Срок изготовления:</span></p>
+            <p>от 2 недель</p>
+            <p><span>Цена:</span></p>
+            <p>от 1300 ₽</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /portfolio -->
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/libs/tooltipster.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

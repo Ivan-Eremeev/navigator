@@ -1,0 +1,49 @@
+.portfolio {
+  padding-top: 38px;
+  padding-bottom: 100px;
+  &__container {
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 75px;
+    h2 {
+      font-size: 29px;
+    }
+  }
+  &__swiper-container {
+  }
+  &__button-prev {
+    color: #808080;
+    transition: 0.3s;
+    left: -25px;
+    &:hover {
+      color: #fd8238;
+    }
+  }
+  &__button-next {
+    color: #808080;
+    transition: 0.3s;
+    right: -25px;
+    &:hover {
+      color: #fd8238;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__container {
+      padding: 0 20px;
+    }
+    &__title {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+    &__button-prev {
+      left: -10px;
+    }
+    &__button-next {
+      right: -10px;
+    }
+  }
+}

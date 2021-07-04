@@ -1,6 +1,6 @@
 @import 'mixins';
 
-@include reset(); // Сброс стилей
+// @include reset(); // Сброс стилей
 
 @import 'mixingrid';
 
@@ -26,3 +26,6 @@ $break_xs: 500px;
 // Подключение файлов
 // @import 'blocks/settings';
 // @import 'blocks/modal';
+@import 'blocks/tooltipster';
+@import 'blocks/welcomescreen';
+@import 'blocks/portfolio';

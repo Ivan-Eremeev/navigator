@@ -7,7 +7,7 @@
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
 $max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$gutter: 20px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
@@ -24,8 +24,10 @@ $break_xs: 500px;
 // $black: #000;
 
 // Подключение файлов
-// @import 'blocks/settings';
+@import 'blocks/settings';
 // @import 'blocks/modal';
 @import 'blocks/tooltipster';
 @import 'blocks/welcomescreen';
 @import 'blocks/portfolio';
+@import 'blocks/item';
+@import 'blocks/iconscreen';

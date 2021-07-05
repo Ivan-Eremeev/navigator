@@ -19,8 +19,8 @@ $(document).ready(function () {
     preloadImages: true,
     loop: true,
     navigation: {
-      nextEl: '.portfolio__button-prev',
-      prevEl: '.portfolio__button-next',
+      prevEl: '.portfolio__button-prev',
+      nextEl: '.portfolio__button-next',
     },
     breakpoints: {
       769: {

@@ -4,6 +4,8 @@
     position: relative;
   }
   &__slide {
+    display: flex;
+    align-items: center;
     position: relative;
     height: calc(100vh - 190px);
   }

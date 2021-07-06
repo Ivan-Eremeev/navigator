@@ -47,7 +47,6 @@ $(document).ready(function () {
           btnNext = $this.find('.swiper-button-next')[0];
         const stepsSwiper = new Swiper(slider, {
           slidesPerView: 1,
-          loop: true,
           navigation: {
             prevEl: btnPrev,
             nextEl: btnNext,
@@ -66,11 +65,6 @@ $(document).ready(function () {
   });
 
   // Fancybox
-  Fancybox.bind(".portfolio__slide a", {
-    on: {
-      ready: (fancybox) => {
-      }
-    }
-  });
+  Fancybox.bind(".portfolio__slide a");
 
 });

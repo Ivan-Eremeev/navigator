@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Navigator</title>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- welcomescreen -->
+    <div class="welcomescreen">
+      <div class="welcomescreen__container">
+        <div class="welcomescreen__swiper-container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img-2.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide welcomescreen__slide">
+              <div class="welcomescreen__img">
+                <img src="img/welcomescreen_img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="welcomescreen__content">
+                  Мы знаем, как сделать клиента или партнера носителем вашего бренда
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="welcomescreen__pagination"></div>
+      </div>
+    </div>
+    <!-- /welcomescreen -->
+
+    <!-- portfolio -->
+    <div class="portfolio">
+      <div class="container">
+        <div class="portfolio__title">
+          <h2>Наши работы</h2>
+        </div>
+        <div class="portfolio__container">
+          <div class="portfolio__swiper-container swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image1.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image2.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image3.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+              <div class="swiper-slide">
+                <img class="tooltip" src="img/portfolio_image4.jpg" alt="" data-tooltip-content="#tooltip1">
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__button-prev swiper-button-prev"></div>
+          <div class="portfolio__button-next swiper-button-next"></div>
+        </div>
+        <div class="tooltip_templates">
+          <div id="tooltip1">
+            <p><span>Клиент:</span></p>
+            <p>Полярные авиалинии</p>
+            <p><span>Тираж:</span></p>
+            <p>200 шт</p>
+            <p><span>Срок изготовления:</span></p>
+            <p>от 2 недель</p>
+            <p><span>Цена:</span></p>
+            <p>от 1300 ₽</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /portfolio -->
+
+    <!-- iconscreen -->
+    <div class="iconscreen">
+      <div class="container">
+        <div class="iconscreen__title">
+          <h2>Собственный уникальный мерч позволяет:</h2>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <!-- item -->
+            <div class="item">
+              <div class="item__icon">
+                <img src="img/svg/smile_icon.svg" alt="">
+              </div>
+              <div class="item__text">
+                <h3>Повысить лояльность сотрудников к компании</h3>
+              </div>
+            </div>
+            <!-- /item -->
+          </div>
+          <div class="col-3">
+            <!-- item -->
+            <div class="item">
+              <div class="item__icon">
+                <img src="img/svg/okay_icon.svg" alt="">
+              </div>
+              <div class="item__text">
+                <h3>Пробудить желание рассказывать о Вашей корпоративной культуре</h3>
+              </div>
+            </div>
+            <!-- /item -->
+          </div>
+          <div class="col-3">
+            <!-- item -->
+            <div class="item">
+              <div class="item__icon">
+                <img src="img/svg/shirt_icon.svg" alt="">
+              </div>
+              <div class="item__text">
+                <h3>Быть самой яркой и запоминающейся командой</h3>
+              </div>
+            </div>
+            <!-- /item -->
+          </div>
+          <div class="col-3">
+            <!-- item -->
+            <div class="item">
+              <div class="item__icon">
+                <img src="img/svg/lamp_icon.svg" alt="">
+              </div>
+              <div class="item__text">
+                <h3>Выразить и красиво донести Вашу идею</h3>
+              </div>
+            </div>
+            <!-- /item -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /iconscreen -->
+
+    <!-- steps -->
+    <div class="steps">
+      <div class="container">
+
+          <div class="steps__block steps__block--left">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>1</span>
+                    <h2>Подача <br>запроса</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>5 шагов работы с нами:</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/lamp2_icon.svg" alt="">
+                      <span>Вы доверяете нам свою идею</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/eye_icon.svg" alt="">
+                      <span>Мы готовим ее визуальное воплощение</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/tool_icon.svg" alt="">
+                      <span>Предлагаем варианты дизайна, материалов и нанесения</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/shirt2_icon.svg" alt="">
+                      <span>Создаем мерч, который хочется использовать</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/smile2_icon.svg" alt="">
+                      <span>Счастливый клиент</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_1.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__block steps__block--right">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>2</span>
+                    <h2>Разработка<br>фирменного стиля</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>Мы создаем текстиль под любые задачи:</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/shirt3_icon.svg" alt="">
+                      <span>одежда для линейного персонала: строгий классический стиль с минимальным креативом в брендбуке заказчика (кепки, футболки)</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/shirt2_icon.svg" alt="">
+                      <span>одежда и мерч для сотрудников: креативный дизайн в стиле компании в классическом и индивидуальном воплощении (свитшоты, форма)</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/shirt4_icon.svg" alt="">
+                      <span>мерч для партнеров и клиентов: уникальные вещи, пронизанные ценностями потребителя (сувенирная продукция, бутылочки для воды и пр.)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__block steps__block--left">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>3</span>
+                    <h2>Подбор<br>материалов</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>Мы выбираем только проверенные материалы:</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/cubes_icon.svg" alt="">
+                      <span>надежные поставщики материалов из России, Белоруссии, Болгарии и Китая</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/spine_icon.svg" alt="">
+                      <span>возможность изготавливать как маленькие тиражи от 50 единиц, так и крупные поставки в 20 000 экземпляров;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/roll_icon.svg" alt="">
+                      <span>высокотехнологичные и натуральные ткани: флис, нейлон, полиэстер, оксфорд, хлопок, лен и др.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_3.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__block steps__block--right">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_4.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>4</span>
+                    <h2>Методы<br>нанесения</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>Мы создаем износостойкие и долговечные принты любой сложности:</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/text_icon.svg" alt="">
+                      <span>используем любые способы нанесения под задачи изделия: тиснение, термоапликации, тампопечать, фольгирование, шелкография, вышивка, термотрасфер и др.;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/figure_icon.svg" alt="">
+                      <span>принты не трескаются, не линяют, не смываются и не блекнут при использовании изделия;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/paints_icon.svg" alt="">
+                      <span>возможна любая цветовая сложность принта: черно-белую или полноцветную, обычными или флуоресцентными красками, с созданием визуальных эффектов.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__block steps__block--left">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>5</span>
+                    <h2>Возможности<br>производства</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>Мы не ограничиваем себя :</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/maneken_icon.svg" alt="">
+                      <span>За многолетний опыт работы мы сформировали современный подход к работе с производителями;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/sewing_icon.svg" alt="">
+                      <span>Более 20 текстильных фабрик в России, Китае и странах СНГ;;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/cutting_icon.svg" alt="">
+                      <span>индивидуальный подход: когда нужно удивить нестандартными лекалами, практическим применением и трендами (эко-направление, биоразлагаемая продукция, авоськи, термостаканы и пр.).</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_5.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__block steps__block--right">
+            <div class="row">
+              <div class="col-6">
+                <div class="steps__swiper">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/steps__image_6.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="steps__content">
+                  <div class="steps__title">
+                    <span>6</span>
+                    <h2>Доставка</h2>
+                  </div>
+                  <div class="steps__text">
+                    <h4>Мы гарантируем, что ни одно изделие при доставке не пострадает:</h4>
+                  </div>
+                  <ul class="steps__list">
+                    <li>
+                      <img src="img/svg/box_icon.svg" alt="">
+                      <span>надежная упаковка изделий с защитой от влаги и возможных повреждений;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/plane_icon.svg" alt="">
+                      <span>предусмотрели различные варианты доставки по стоимости и срокам;</span>
+                    </li>
+                    <li>
+                      <img src="img/svg/car_icon.svg" alt="">
+                      <span>доставим изделия в любую точку России и стран СНГ.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <!-- /steps -->
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/libs/tooltipster.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

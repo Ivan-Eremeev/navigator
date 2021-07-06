@@ -17,11 +17,8 @@ $break_md: 1050px;
 $break_sm: 769px;
 $break_xs: 500px;
 
-// Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
-
 // Цвета
-// $black: #000;
+$orange: #fd8238;
 
 // Подключение файлов
 @import 'blocks/settings';
@@ -31,3 +28,4 @@ $break_xs: 500px;
 @import 'blocks/portfolio';
 @import 'blocks/item';
 @import 'blocks/iconscreen';
+@import 'blocks/steps';

@@ -9,3 +9,7 @@
   @include col-sm(6);
   @include col-xs(12);
 }
+.col-6 {
+  @include col(6);
+  @include col-sm(12);
+}

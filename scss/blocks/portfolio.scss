@@ -1,6 +1,6 @@
 .portfolio {
   padding-top: 38px;
-  padding-bottom: 100px;
+  padding-bottom: 115px;
   &__container {
     position: relative;
   }
@@ -17,16 +17,33 @@
     color: #808080;
     transition: 0.3s;
     left: -25px;
+    &:after {
+      font-size: 35px;
+    }
     &:hover {
-      color: #fd8238;
+      color: $orange;
     }
   }
   &__button-next {
     color: #808080;
     transition: 0.3s;
     right: -25px;
+    &:after {
+      font-size: 35px;
+    }
     &:hover {
-      color: #fd8238;
+      color: $orange;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &__container {
+      padding: 0 20px;
+    }
+    &__button-prev {
+      left: -10px;
+    }
+    &__button-next {
+      right: -10px;
     }
   }
   @media (max-width: $break_sm) {

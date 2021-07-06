@@ -1,0 +1,142 @@
+.steps {
+  padding-top: 58px;
+  &__block {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &--left {
+      padding-left: 75px;
+      .steps__content {
+        margin-right: 10px;
+      }
+    }
+    &--right {
+      padding-right: 75px;
+      .steps__content {
+        margin-left: 30px;
+      }
+    }
+  }
+  &__content {
+
+  }
+  &__text {
+    h4 {
+      padding-left: 50px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 47px;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      margin-right: 20px;
+      margin-top: 7px;
+      background-color: $orange;
+      border-radius: 100%;
+      font-size: 18px;
+      color: #fff;
+    }
+    h2 {
+      font-size: 29px;
+      line-height: 37px;
+      text-align: left;
+    }
+  }
+  &__list {
+    font-size: 15px;
+    line-height: 24px;
+    li {
+      padding: 12px 0 12px 50px;
+      position: relative;
+      img {
+        width: 30px;
+        max-height: 40px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+  &__swiper {
+    padding: 0 25px;
+    position: relative;
+  }
+  .swiper-container {
+    max-width: 400px;
+  }
+  .swiper-button-prev {
+    color: #808080;
+    transition: 0.3s;
+    left: 0;
+    &:after {
+      font-size: 35px;
+    }
+    &:hover {
+      color: $orange;
+    }
+  }
+  .swiper-button-next {
+    color: #808080;
+    transition: 0.3s;
+    right: 0;
+    &:after {
+      font-size: 35px;
+    }
+    &:hover {
+      color: $orange;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__block {
+      margin-bottom: 50px;
+      &--left {
+        padding-left: 0;
+      }
+      &--right {
+        padding-right: 0;
+        .row {
+          .col-6 {
+            &:first-child {
+              order: 2;
+            }
+          }
+        }
+        .steps__content {
+          margin-left: 0;
+        }
+      }
+    }
+    &__content {
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 25px;
+      h2 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &__text {
+      h4 {
+        margin-bottom: 12px;
+      }
+    }
+    &__list {
+      li {
+        padding: 8px 0 8px 50px;
+      }
+    }
+    &__swiper {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

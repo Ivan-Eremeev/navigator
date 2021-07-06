@@ -1,0 +1,15 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1294 1490" width="1294" height="1490">
+	<title>Capa 1</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+	</style>
+	<g id="Capa 1">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="shp0" d="M647 996.36L0.67 1195.24L647 0.52L1293.32 1195.24L651.41 997.72L647 996.36ZM677 942.81L1170.73 1094.73L677 182.09L677 942.81ZM617 182.09L123.27 1094.73L617 942.81L617 182.09Z" />
+			<path id="&lt;Path&gt;" class="shp0" d="M617 1159.98L617 1490L677 1490L677 1159.98L617 1159.98Z" />
+			<path id="&lt;Path&gt;" class="shp0" d="M436.99 1159.98L436.99 1399.99L496.99 1399.99L496.99 1159.98L436.99 1159.98Z" />
+			<path id="&lt;Path&gt;" class="shp0" d="M797.01 1159.98L797.01 1399.99L857.01 1399.99L857.01 1159.98L797.01 1159.98Z" />
+		</g>
+	</g>
+</svg>

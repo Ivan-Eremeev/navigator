@@ -51,6 +51,7 @@
   }
   &__list {
     font-size: 15px;
+    font-weight: 500;
     line-height: 24px;
     li {
       padding: 12px 0 12px 50px;
@@ -59,8 +60,15 @@
         width: 30px;
         max-height: 40px;
         position: absolute;
-        top: 10px;
+        top: 20px;
         left: 0;
+      }
+    }
+    &--imgtop {
+      li {
+        img {
+          top: 10px;
+        }
       }
     }
   }

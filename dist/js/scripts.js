@@ -21,7 +21,6 @@ $(document).ready(function () {
     const portfolioSwiper = new Swiper('.portfolio__swiper-container', {
       spaceBetween: 10,
       slidesPerView: 1,
-      loop: true,
       navigation: {
         prevEl: '.portfolio__button-prev',
         nextEl: '.portfolio__button-next',
@@ -65,4 +64,13 @@ $(document).ready(function () {
     delay: 100,
     contentCloning: true
   });
+
+  // Fancybox
+  Fancybox.bind(".portfolio__slide a", {
+    on: {
+      ready: (fancybox) => {
+      }
+    }
+  });
+
 });

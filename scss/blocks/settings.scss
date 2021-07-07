@@ -13,3 +13,16 @@
   @include col(6);
   @include col-sm(12);
 }
+.fancybox__nav {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.carousel__button svg {
+  width: 35px;
+  height: 35px;
+}
+.fancybox__thumb {
+  background-size: contain;
+  padding-top: 128%;
+}

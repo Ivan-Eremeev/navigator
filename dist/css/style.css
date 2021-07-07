@@ -56,6 +56,10 @@
   padding-top: 128%;
 }
 
+.fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .tooltip_templates {
   display: none;
 }

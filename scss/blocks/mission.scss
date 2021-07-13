@@ -1,0 +1,53 @@
+.mission {
+  background: linear-gradient(158deg, #5B865B 26%, #EAEAF0 26.1%);
+  background-size: cover;
+  .container {
+    padding-top: 64px;
+    padding-bottom: 33px;
+    background-image: url(../img/mission_bg.png);
+    background-size: auto 400px;
+    background-repeat: no-repeat;
+    background-position: left top 50px;
+  }
+  &__col {
+    @include col(6);
+    @include col-sm(12);
+  }
+  &__img {
+    max-width: 460px;
+    margin-top: -120px;
+    margin-left: -30px;
+  }
+  &__content {
+  }
+  &__title {
+    margin-bottom: 104px;
+    h2 {
+      font-size: 29px;
+      line-height: 37px;
+      text-align: left;
+    }
+  }
+  &__text {
+    p {
+      margin-bottom: 78px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    background: linear-gradient(158deg, #5B865B 15%, #EAEAF0 15.1%);
+    &__img {
+      display: none;
+    }
+    &__title {
+      margin-bottom: 50px;
+      h2 {
+        text-align: center;
+      }
+    }
+    &__text {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

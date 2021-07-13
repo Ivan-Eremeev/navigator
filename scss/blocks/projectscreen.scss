@@ -1,0 +1,51 @@
+.projectscreen {
+  padding-top: 64px;
+  padding-bottom: 52px;
+  &__title {
+    h2 {
+      font-size: 29px;
+      line-height: 37px;
+    }
+  }
+  &__slider {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &__swiper-container {
+  }
+  &__button-prev {
+    color: #808080;
+    left: -10px;
+    &:hover {
+      color: $orange;
+    }
+    &:after {
+      font-size: 35px;
+    }
+  }
+  &__button-next {
+    color: #808080;
+    right: -10px;
+    &:hover {
+      color: $orange;
+    }
+    &:after {
+      font-size: 35px;
+    }
+  }
+  &__badge {
+    text-align: center;
+    img {
+      max-width: 250px;
+    }
+  }
+  &__slide {
+    text-align: center;
+    img {
+      max-height: 400px;
+    }
+  }
+  .swiper-wrapper {
+    align-items: center;
+  } 
+}

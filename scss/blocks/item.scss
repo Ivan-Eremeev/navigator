@@ -17,6 +17,27 @@
       font-weight: 500;
     }
   }
+  &--two {
+    .item__text {
+      h3 {
+        max-width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        line-height: 21px;
+      }
+      P {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    }
+    .item__icon {
+      margin-bottom: 8px;
+      img {
+        width: 65px;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     font-size: 15px;
   }
@@ -29,6 +50,13 @@
     }
     &__text {
       text-align: center;
+    }
+    &--two {
+      .item__text {
+        h3 {
+          max-width: none;
+        }
+      }
     }
   }
 }

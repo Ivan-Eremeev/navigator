@@ -1,0 +1,308 @@
+.stepscreen {
+  padding-top: 68px;
+  padding-bottom: 50px;
+  background-image: url(../img/kite.png), linear-gradient(to bottom, #D1D2D3, #E3E2E3);
+  background-repeat: no-repeat;
+  background-position: top left -630px, center;
+  background-size: auto 100%;
+  &__title {
+    margin-bottom: 95px;
+    h2 {
+      font-size: 29px;
+      line-height: 37px;
+    }
+  }
+  &__row {
+    display: flex;
+    &--1 {
+      .stepscreen__item {
+        @include col(2.4 );
+        @include col-md(12);
+        padding-bottom: 42px;
+        &:after {
+          bottom: 0;
+        }
+      }
+      .stepscreen__num {
+        bottom: -10px;
+      }
+    }
+    &--2 {
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      .stepscreen__item {
+        @include col(3);
+        @include col(12);
+        padding-top: 42px;
+        &:after {
+          top: 0;
+        }
+      }
+      .stepscreen__num {
+        top: -10px;
+      }
+    }
+  }
+  &__item {
+    padding-left: 40px;
+
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background-color: $orange;
+      position: absolute;
+      left: 40px;
+    }
+  }
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 31px;
+    z-index: 2;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 20px;
+    h3 {
+      font-size: 15px;
+    }
+  }
+  &__line {
+    height: 1px;
+    background-color: $orange;
+  }
+  @media (max-width: $break_md) {
+    background-position: top right 100px, center;
+    &__item {
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    background-size: auto 50%, auto;
+    background-position: top right -100px, center;
+    &__title {
+      margin-bottom: 70px;
+    }
+    .container:nth-child(2) {
+      display: flex;
+    }
+    &__container {
+      display: flex;
+      padding-left: 20px;
+      padding-right: 20px;
+      .container {
+        padding: 0;
+      }
+    }
+    &__row {
+      display: block;
+      &--1 {
+        padding-right: 10px;
+        .stepscreen__item {
+          padding-bottom: 30px;
+        }
+        .stepscreen__num {
+          top: 10px;
+          bottom: auto;
+        }
+      }
+      &--2 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-left: 10px;
+        .stepscreen__item {
+          padding-top: 0;
+          padding-bottom: 30px;
+        }
+        .stepscreen__num {
+          top: 10px;
+        }
+      }
+    }
+    &__line {
+      display: none;
+    }
+    &__item {
+      padding-left: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &__num {
+      left: 0;
+    }
+    &__icon {
+      margin-left: 32px;
+    }
+  }
+}
+
+// .stepscreen {
+//   padding-top: 68px;
+//   padding-bottom: 50px;
+//   background-image: url(../img/kite.png), linear-gradient(to bottom, #D1D2D3, #E3E2E3);
+//   background-repeat: no-repeat;
+//   background-position: top left -630px, center;
+//   background-size: auto 100%;
+//   &__title {
+//     margin-bottom: 95px;
+//     h2 {
+//       font-size: 29px;
+//       line-height: 37px;
+//     }
+//   }
+//   &__container {
+//     margin: 290px 0;
+//     height: 1px;
+//     background-color: $orange;
+//   }
+//   &__item {
+//     width: 20%;
+//     padding-left: 40px;
+//     position: absolute;
+//     &:nth-child(odd) {
+//       bottom: 0;
+//       padding-bottom: 40px;
+//       &:after {
+//         bottom: 0;
+//       }
+//       .stepscreen__num {
+//         bottom: -10px;
+//       }
+//     }
+//     &:nth-child(even) {
+//       top: 0;
+//       padding-top: 40px;
+//       &:after {
+//         top: 0;
+//       }
+//       .stepscreen__num {
+//         top: -10px;
+//       }
+//     }
+//     &:nth-child(1) {
+//       left: 0;
+//     }
+//     &:nth-child(2) {
+//       left: 10%;
+//     }
+//     &:nth-child(3) {
+//       left: 20%;
+//     }
+//     &:nth-child(4) {
+//       left: 30%;
+//     }
+//     &:nth-child(5) {
+//       left: 40%;
+//     }
+//     &:nth-child(6) {
+//       left: 50%;
+//     }
+//     &:nth-child(7) {
+//       left: 60%;
+//     }
+//     &:nth-child(8) {
+//       left: 70%;
+//     }
+//     &:nth-child(9) {
+//       left: 80%;
+//     }
+//     &:after {
+//       content: '';
+//       display: block;
+//       width: 1px;
+//       height: 40px;
+//       background-color: $orange;
+//       position: absolute;
+//       left: 40px;
+//     }
+//   }
+//   &__num {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 20px;
+//     height: 20px;
+//     background-color: $orange;
+//     border-radius: 100%;
+//     font-size: 10px;
+//     font-weight: bold;
+//     color: #fff;
+//     position: absolute;
+//     left: 31px;
+//     z-index: 2;
+//   }
+//   &__icon {
+//     width: 40px;
+//     height: 40px;
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 10px;
+//     img {
+//       max-height: 100%;
+//     }
+//   }
+//   &__text {
+//     font-size: 15px;
+//     line-height: 20px;
+//     h3 {
+//       font-size: 15px;
+//     }
+//   }
+//   &__line {
+//     height: 1px;
+//     background-color: $orange;
+//   }
+//   @media (max-width: $break_md) {
+//     background-position: top right 100px, center;
+//     &__item {
+//       padding-left: 10px;
+//     }
+//   }
+//   @media (max-width: $break_sm) {
+//     background-size: auto 50%, auto;
+//     background-position: top right -100px, center;
+//     &__container {
+//       height: auto;
+//       background-color: transparent;
+//       .container {
+//         display: flex;
+//         flex-wrap: wrap;
+//       }
+//     }
+//     &__item {
+//       position: static;
+//       width: 50%;
+//       &:nth-child(odd) {
+//         padding-bottom: 0;
+//       }
+//       &:nth-child(even) {
+//         padding-top: 0;
+//       }
+//     }
+//   }
+// }

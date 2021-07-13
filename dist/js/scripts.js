@@ -57,6 +57,26 @@ $(document).ready(function () {
   }
   swiperSteps();
 
+  // Swiper projectscreen
+  if ($('.projectscreen__swiper-container')) {
+    const projectscreenSwiper = new Swiper('.projectscreen__swiper-container', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: '.projectscreen__button-prev',
+        nextEl: '.projectscreen__button-next',
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 3,
+        },
+        500: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  };
+
   // Tooltipster
   $('.tooltip').tooltipster({
     theme: 'custom-theme',
@@ -64,7 +84,15 @@ $(document).ready(function () {
     contentCloning: true
   });
 
-  // Fancybox
+  // Fancybox portfolio
   Fancybox.bind(".portfolio__slide a");
+
+  // Fancybox projectscreen
+  Fancybox.bind(".projectscreen__slide a");
+
+  // JQueryMatchHeight
+  $('.stepscreen__item').matchHeight({
+    byRow: false,
+  });
 
 });

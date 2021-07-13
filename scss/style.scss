@@ -20,6 +20,9 @@ $break_xs: 500px;
 // Цвета
 $orange: #fd8238;
 
+// Шрифты
+// @include font-face("Panton Icon", "../fonts/PantonIconsA/PantonIconsABold", normal, normal);
+
 // Подключение файлов
 @import 'blocks/settings';
 // @import 'blocks/modal';
@@ -29,3 +32,6 @@ $orange: #fd8238;
 @import 'blocks/item';
 @import 'blocks/iconscreen';
 @import 'blocks/steps';
+@import 'blocks/mission';
+@import 'blocks/projectscreen';
+@import 'blocks/stepscreen';

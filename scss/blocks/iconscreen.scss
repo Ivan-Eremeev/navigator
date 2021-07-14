@@ -23,6 +23,23 @@
       margin-bottom: 90px;
     }
   }
+  &--three {
+    background-color: #fff;
+    padding-bottom: 80px;
+    .container {
+      max-width: 1030px;
+    }
+    .col-4 {
+      padding-left: 60px;
+    }
+  }
+  @media (max-width: $break_md) {
+    &--three {
+      .col-4 {
+        padding-left: $gutter;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -37,6 +54,9 @@
       .iconscreen__title {
         margin-bottom: 20px;
       }
+    }
+    &--three {
+      padding-bottom: 30px;
     }
   }
 }

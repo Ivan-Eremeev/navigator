@@ -3,7 +3,7 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
   .container {
-    height: calc(100vh - 132px);
+    min-height: calc(100vh - 132px);
     padding-top: 72px;
     padding-bottom: 50px;
     display: flex;
@@ -29,6 +29,26 @@
       font-weight: 500;
       margin-bottom: 20px;
       line-height: 21px;
+    }
+  }
+  @media (max-width: $break_lg) {
+    background-position: left -200px bottom;
+    &__text {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: $break_md) {
+    background-size: auto 500px;
+  }
+  @media (max-width: $break_sm) {
+    background-image: none;
+    .container {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+    &__text {
+      max-width: none;
+      margin-right: 0;
     }
   }
 }

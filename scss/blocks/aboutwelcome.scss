@@ -1,0 +1,34 @@
+.aboutwelcome {
+  background-image: url(../img/aboutwelcome_bg.jpg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  .container {
+    height: calc(100vh - 132px);
+    padding-top: 72px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__text {
+    max-width: 620px;
+    margin-right: 67px;
+    h2 {
+      text-align: left;
+      font-size: 29px;
+      line-height: 37px;
+      margin-bottom: 36px;
+    }
+    h3 {
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 21px;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      line-height: 21px;
+    }
+  }
+}

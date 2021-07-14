@@ -1,0 +1,25 @@
+.aboutitems {
+  background-color: #FF8836;
+  background-image: url(../img/aboutitems_bg.jpg);
+  color: #fff;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 50%;
+  }
+  &__icon {
+  }
+  &__content {
+  }
+  &__title {
+    font-size: 29px;
+    line-height: 37px;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

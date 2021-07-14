@@ -32,3 +32,16 @@
 .fancybox__thumb {
   background-color: #fff;
 }
+
+.form--image {
+  background-image: url(../img/form-bg.jpg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  @media (max-width: $break_lg) {
+    background-size: auto 70%;
+  }
+  @media (max-width: $break_sm) {
+    background-image: none;
+  }
+}

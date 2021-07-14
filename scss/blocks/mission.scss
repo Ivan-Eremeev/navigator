@@ -35,6 +35,9 @@
   }
   @media (max-width: $break_sm) {
     background: linear-gradient(158deg, #5B865B 15%, #EAEAF0 15.1%);
+    .container {
+      background-image: none;
+    }
     &__img {
       display: none;
     }

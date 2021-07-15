@@ -30,14 +30,6 @@
       max-width: 1030px;
     }
     .col-4 {
-      padding-left: 60px;
-    }
-  }
-  @media (max-width: $break_md) {
-    &--three {
-      .col-4 {
-        padding-left: $gutter;
-      }
     }
   }
   @media (max-width: $break_sm) {

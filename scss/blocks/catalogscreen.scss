@@ -16,8 +16,8 @@
   }
   &__col {
     @include col(3);
-    @include col-sm(4);
-    @include col-xs(6);
+    @include col-sm(6);
+    @include col-xs(12);
     padding-left: 60px;
     padding-bottom: 105px;
   }
@@ -84,6 +84,12 @@
     &__col {
       padding-left: $gutter;
       padding-bottom: 40px;
+    }
+    &__subtitle {
+      font-size: 20px;
+    }
+    &__list {
+      font-size: 15px;
     }
   }
 }

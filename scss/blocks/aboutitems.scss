@@ -7,15 +7,23 @@
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
+  .container {
+  }
   &__row {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+  }
+  &__col {
+    display: flex;
+    width: 50%;
+    padding-bottom: 78px;
+    &:nth-child(even) {
+      justify-content: flex-end;
+    }
   }
   &__item {
     display: flex;
-    width: 50%;
-    padding-left: 86px;
-    padding-bottom: 78px;
   }
   &__icon {
     width: 70px;
@@ -37,10 +45,16 @@
     font-weight: 500;
     line-height: 21px;
   }
+  @media (max-width: $break_xl) {
+    .container {
+    }
+  }
   @media (max-width: $break_md) {
+    &__col {
+      padding-bottom: 40px;
+    }
     &__item {
       display: block;
-      padding-bottom: 40px;
     }
     &__icon {
       margin-right: 0;
@@ -54,14 +68,22 @@
   @media (max-width: $break_sm) {
     padding-top: 50px;
     padding-bottom: 10px;
+    &__row {
+      margin-left: -20px;
+    }
     &__item {
       padding-left: 20px;
     }
   }
   @media (max-width: $break_xs) {
     background-image: none;
-    &__item {
+    &__col {
       width: 100%;
+    }
+    &__row {
+      margin-left: 0;
+    }
+    &__item {
       padding-left: 0;
       text-align: center;
     }

@@ -46,3 +46,41 @@
     background-image: none;
   }
 }
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: $orange;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+  &:hover {
+    background-color: #FFAD63;
+  }
+}
+@media (min-width: $break_md + 1) {
+  .tab-visible {
+    display: none !important;
+  }
+}
+@media (max-width: $break_md) {
+  .tab-hide {
+    display: none !important;
+  }
+}
+@media (min-width: $break_sm + 1) {
+  .mobile-visible {
+    display: none !important;
+  }
+}
+@media (max-width: $break_sm) {
+  .mobile-hide {
+    display: none !important;
+  }
+}

@@ -77,6 +77,20 @@ $(document).ready(function () {
     });
   };
 
+  // Swiper productscreen
+  if ($('.productscreen__swiper-container')) {
+    const productscreenSwiperThumbs = new Swiper('.productscreen__thumbs-swiper-container', {
+      spaceBetween: 5,
+      slidesPerView: 3,
+    });
+    const productscreenSwiper = new Swiper('.productscreen__swiper-container', {
+      slidesPerView: 1,
+      thumbs: {
+        swiper: productscreenSwiperThumbs
+      },
+    });
+  };
+
   // Tooltipster
   $('.tooltip').tooltipster({
     theme: 'custom-theme',
@@ -90,9 +104,36 @@ $(document).ready(function () {
   // Fancybox projectscreen
   Fancybox.bind(".projectscreen__slide a");
 
+  // Fancybox productscreen
+  Fancybox.bind(".productscreen__slide a");
+
   // JQueryMatchHeight
   $('.stepscreen__item').matchHeight({
     byRow: false,
   });
+
+  // Калькулятор цены на странице товара
+  $('#quantity').on('input keyup', (function () {
+    calcPrice();
+  }));
+  function calcPrice() {
+    var price = parseInt($('#priceOne').text()),
+      quantity = parseInt($('#quantity').val()),
+      result = $('#resultPrice');
+    if (isNaN(quantity)) {
+      quantity = 1;
+    }
+    var resultPrice = numericFormat(price * quantity);
+    result.text(resultPrice + ' руб.');
+  }
+  calcPrice();
+
+  // Делитель цены
+  function numericFormat(value, decimal, thousand) {
+    if (!decimal) decimal = ' ';
+    if (!thousand) thousand = '.';
+    var parts = value.toString().split('.');
+    return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, decimal) + (parts[1] ? thousand + parts[1] : '');
+  }
 
 });

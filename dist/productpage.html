@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.css">
+
+  <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Navigator</title>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- productscreen -->
+    <div class="productscreen">
+      <div class="container">
+        <div class="row">
+          <div class="productscreen__col productscreen__col--1">
+
+            <div class="productscreen__slider">
+
+              <!-- breadcrumbs two -->
+              <div class="breadcrumbs breadcrumbs--two tab-visible">
+                <ul class="breadcrumbs__list">
+                  <li>
+                    <a href="#">Главная</a>
+                  </li>
+                  <li>
+                    <a href="#">Каталог</a>
+                  </li>
+                  <li>
+                    <a href="#">Посуда</a>
+                  </li>
+                  <li>
+                    <a href="#">Кружки</a>
+                  </li>
+                  <li>
+                    <span>Кружка New Aurora Soft, бирюзовая</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- /breadcrumbs two -->
+
+              <div class="productscreen__title tab-visible">
+                <h2>Кружка New Aurora Soft, бирюзовая</h2>
+              </div>
+
+              <div class="productscreen__swiper-container swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="productscreen__slide swiper-slide">
+                    <a href="img/cup_turquoise_full.jpg">
+                      <img src="img/cup_turquoise_full.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="productscreen__slide swiper-slide">
+                    <a href="img/cup_turquoise_full.jpg">
+                      <img src="img/cup_turquoise_full.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="productscreen__slide swiper-slide">
+                    <a href="img/cup_turquoise_full.jpg">
+                      <img src="img/cup_turquoise_full.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="productscreen__slide swiper-slide">
+                    <a href="img/cup_turquoise_full.jpg">
+                      <img src="img/cup_turquoise_full.jpg" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="productscreen__thumbs-swiper-container swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/cup_turquoise.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/cup_turquoise.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/cup_turquoise.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/cup_turquoise.jpg" alt=""></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="productscreen__col productscreen__col--2">
+            <!-- breadcrumbs two -->
+            <div class="breadcrumbs breadcrumbs--two tab-hide">
+              <ul class="breadcrumbs__list">
+                <li>
+                  <a href="#">Главная</a>
+                </li>
+                <li>
+                  <a href="#">Каталог</a>
+                </li>
+                <li>
+                  <a href="#">Посуда</a>
+                </li>
+                <li>
+                  <a href="#">Кружки</a>
+                </li>
+                <li>
+                  <span>Кружка New Aurora Soft, бирюзовая</span>
+                </li>
+              </ul>
+            </div>
+            <!-- /breadcrumbs two -->
+
+            <div class="productscreen__title tab-hide">
+              <h2>Кружка New Aurora Soft, бирюзовая</h2>
+            </div>
+
+            <div class="productscreen__description">
+              <p>Код товара: IL-312862<br>Артикул: 6005.17</p>
+              <p>Цена: <span id="priceOne">337 &#8381;</span></p>
+              <p>Цвет товара: Бирюзовый</p>
+            </div>
+
+            <div class="productscreen__color">
+              <img src="img/cup_yellow.jpg" alt="">
+              <img class="active" src="img/cup_turquoise.jpg" alt="">
+              <img src="img/cup_blue.jpg" alt="">
+              <img src="img/cup_lightblue.jpg" alt="">
+              <img src="img/cup_violet.jpg" alt="">
+              <img src="img/cup_red.jpg" alt="">
+              <img src="img/cup_pink.jpg" alt="">
+              <img src="img/cup_orange.jpg" alt="">
+            </div>
+
+            <form action="" class="productscreen__calc">
+              <div class="productscreen__calc-row">
+                <div class="productscreen__calc-col productscreen__calc-col--1">
+                  <p>В наличии</p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--2">
+                  <p>350 шт</p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--3"></div>
+                <div class="productscreen__calc-col productscreen__calc-col--1">
+                  <p>Тираж</p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--2">
+                  <div class="productscreen__input">
+                    <input type="text" id="quantity" value="10" min="1" data-inputmask="'mask': '9{1,6} шт'">
+                  </div>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--3 mobile-hide">
+                  <p>Итого <span id="resultPrice">0</span></p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--1">
+                  <p>Добавить нанесение</p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--2">
+                  <div class="productscreen__file">
+                    <input id="productscreen_file" type="file">
+                    <label for="productscreen_file">Прикрепить файл</label>
+                  </div>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--3 mobile-visible">
+                  <p>Итого <span id="resultPrice">3 370 руб.</span></p>
+                </div>
+                <div class="productscreen__calc-col productscreen__calc-col--3">
+                  <button type="submit" class="button">В корзину</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="productscreen__parameters">
+              <div class="productscreen__parameters-row">
+                <div class="productscreen__parameters-col productscreen__parameters-col--1">
+                  <div class="productscreen__subtitle">Описание</div>
+                </div>
+                <div class="productscreen__parameters-col productscreen__parameters-col--2">
+                  <p>Подарите истинные ощущения от прикосновения с вашим брендом. Кружка New Aurora Soft обладает приятным на ощупь покрытием
+                  soft touch, а возможность персонализации с помощью лазерной гравировки сделает из неё эффективный рекламный инструмент.
+                  Кружки с данным покрытием не рекомендуется мыть в посудомоечной машине. Цвет — бирюзовый. Объем: 340 мл.</p>
+                </div>
+              </div>
+              <div class="productscreen__parameters-row">
+                <div class="productscreen__parameters-col productscreen__parameters-col--1">
+                  <div class="productscreen__subtitle">Характеристики</div>
+                </div>
+                <div class="productscreen__parameters-col productscreen__parameters-col--2">
+                  <p>Код товара: IL-312862</p>
+                  <p>Цвет: бирюзовый</p>
+                  <p>Материал: керамика, soft touch</p>
+                </div>
+              </div>
+              <div class="productscreen__parameters-row">
+                <div class="productscreen__parameters-col productscreen__parameters-col--1">
+                  <div class="productscreen__subtitle">Нанесение</div>
+                </div>
+                <div class="productscreen__parameters-col productscreen__parameters-col--2">
+                  <p><a href="#">Лазерная гравировка</a></p>
+                </div>
+              </div>
+              <div class="productscreen__parameters-row">
+                <div class="productscreen__parameters-col productscreen__parameters-col--1">
+                  <div class="productscreen__subtitle">Доставка и оплата</div>
+                </div>
+                <div class="productscreen__parameters-col productscreen__parameters-col--2">
+                  <p>Ознакомьтесь с нашими</p>
+                  <p><a href="#">условиями и способами доставки</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /productscreen -->
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.umd.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/libs/tooltipster.bundle.min.js"></script>
+  <script src="js/libs/jquery.matchHeight-min.js"></script>
+  <script src="js/libs/jquery.inputmask.min.js"></script>
+  <script src="js/libs/inputmask.binding.js"></script>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

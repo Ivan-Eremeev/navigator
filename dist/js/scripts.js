@@ -119,7 +119,7 @@ $(document).ready(function () {
   function calcPrice() {
     var price = parseInt($('#priceOne').text()),
       quantity = parseInt($('#quantity').val()),
-      result = $('#resultPrice');
+      result = $('.resultPrice');
     if (isNaN(quantity)) {
       quantity = 1;
     }

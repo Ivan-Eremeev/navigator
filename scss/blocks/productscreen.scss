@@ -161,6 +161,7 @@
   }
   &__slider {
     padding-top: 20px;
+    text-align: center;
   }
   &__swiper-container {
     margin-bottom: 20px;
@@ -168,21 +169,23 @@
   &__thumbs-swiper-container {
     max-width: 210px;
     .swiper-slide {
+      width: 70px;
       position: relative;
+      cursor: pointer;
       &:after {
         content: '';
         display: block;
         padding-top: 100%;
       }
       img {
+        width: 100%;
+        height: 100%;
         border: 1px solid #DFE4E8;
         object-fit: cover;
         transition: 0.2s;
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
-        right: 0;
         &:hover {
           border-color: #999;
         }

@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   // Swiper welcomescreen
-  if ($('.welcomescreen__swiper-container')) {
+  if ($('.welcomescreen__swiper-container').length) {
     const welcomescreenSwiper = new Swiper('.welcomescreen__swiper-container', {
       spaceBetween: 30,
       fadeEffect: { crossFade: !0 },
@@ -17,7 +17,7 @@ $(document).ready(function () {
   }
 
   // Swiper portfolio
-  if ($('.portfolio__swiper-container')) {
+  if ($('.portfolio__swiper-container').length) {
     const portfolioSwiper = new Swiper('.portfolio__swiper-container', {
       spaceBetween: 10,
       slidesPerView: 1,
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
   // Swiper steps
   function swiperSteps() {
-    if ($('.steps__swiper')) {
+    if ($('.steps__swiper').length) {
       var block = $('.steps__swiper');
       block.each(function () {
         var $this = $(this),
@@ -58,7 +58,7 @@ $(document).ready(function () {
   swiperSteps();
 
   // Swiper projectscreen
-  if ($('.projectscreen__swiper-container')) {
+  if ($('.projectscreen__swiper-container').length) {
     const projectscreenSwiper = new Swiper('.projectscreen__swiper-container', {
       spaceBetween: 10,
       slidesPerView: 1,
@@ -78,10 +78,13 @@ $(document).ready(function () {
   };
 
   // Swiper productscreen
-  if ($('.productscreen__swiper-container')) {
+  if ($('.productscreen__swiper-container').length) {
     const productscreenSwiperThumbs = new Swiper('.productscreen__thumbs-swiper-container', {
       spaceBetween: 5,
       slidesPerView: 3,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
     });
     const productscreenSwiper = new Swiper('.productscreen__swiper-container', {
       slidesPerView: 1,
@@ -92,25 +95,35 @@ $(document).ready(function () {
   };
 
   // Tooltipster
-  $('.tooltip').tooltipster({
-    theme: 'custom-theme',
-    delay: 100,
-    contentCloning: true
-  });
+  if ($('.tooltip').length) {
+    $('.tooltip').tooltipster({
+      theme: 'custom-theme',
+      delay: 100,
+      contentCloning: true
+    });
+  }
 
   // Fancybox portfolio
-  Fancybox.bind(".portfolio__slide a");
+  if ($('.portfolio__slide a').length) {
+    Fancybox.bind(".portfolio__slide a");
+  }
 
   // Fancybox projectscreen
-  Fancybox.bind(".projectscreen__slide a");
+  if ($('.projectscreen__slide a').length) {
+    Fancybox.bind(".projectscreen__slide a");
+  }
 
   // Fancybox productscreen
-  Fancybox.bind(".productscreen__slide a");
+  if ($('.productscreen__slide a').length) {
+    Fancybox.bind(".productscreen__slide a");
+  }
 
   // JQueryMatchHeight
-  $('.stepscreen__item').matchHeight({
-    byRow: false,
-  });
+  if ($('.stepscreen__item').length) {
+    $('.stepscreen__item').matchHeight({
+      byRow: false,
+    });
+  }
 
   // Калькулятор цены на странице товара
   $('#quantity').on('input keyup', (function () {

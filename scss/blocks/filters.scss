@@ -1,0 +1,97 @@
+.filters {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col {
+  }
+  &__switch {
+    display: flex;
+    align-items: center;
+    label {
+      width: 30px;
+      height: 14px;
+      background-color: $orange;
+      border: 1px solid $orange;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      &:after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      &:before {
+        content: '';
+        display: block;
+        background-color: #B8B8B8;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+    input {
+      display: none;
+      &:checked {
+        + label {
+          &:after {
+            left: 16px;
+          }
+          &:before {
+            left: 16px;
+          }
+        }
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-left: -30px;
+  }
+  &__item {
+    position: relative;
+    padding-right: 15px;
+    margin-left: 30px;
+    &:after {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 257.56 451.84'%3E%3Cpath class='st0' d='M0,225.92C0,217.82 3.09,209.72 9.26,203.55L203.55,9.26C215.9,-3.08 235.94,-3.08 248.3,9.26C260.65,21.62 260.65,41.65 248.3,54.01L76.38,225.92L248.29,397.82C260.64,410.18 260.64,430.21 248.29,442.57C235.94,454.93 215.9,454.93 203.54,442.57L9.25,248.29C3.08,242.11 0,234.01 0,225.92' fill='%23999'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 1.5px;
+      right: 0;
+      transform: rotate(-90deg);
+    }
+  }
+  &__drop {
+    
+  }
+  &__method {
+
+  }
+  &__link {
+    cursor: pointer;
+    user-select: none;
+  }
+  @media (max-width: $break_sm) {
+    display: none;
+  }
+}

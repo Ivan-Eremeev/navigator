@@ -84,3 +84,24 @@
     display: none !important;
   }
 }
+.title {
+  h2 {
+    font-size: 29px;
+    line-height: 37px;
+    text-align: left;
+  }
+  &--center {
+    h2 {
+      text-align: center;
+    }
+  }
+  @media (max-width: $break_sm) {
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+.recommendation__links {
+  align-items: stretch !important;
+}

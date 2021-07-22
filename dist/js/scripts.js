@@ -94,6 +94,29 @@ $(document).ready(function () {
     });
   };
 
+  // Swiper viewed-products
+  if ($('.viewed-products__swiper-container').length) {
+    const viewedProductsSwiper = new Swiper('.viewed-products__swiper-container', {
+      spaceBetween: 20,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: '.viewed-products__button-prev',
+        nextEl: '.viewed-products__button-next',
+      },
+      breakpoints: {
+        770: {
+          slidesPerView: 4,
+        },
+        501: {
+          slidesPerView: 3,
+        },
+        371: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  };
+
   // Tooltipster
   if ($('.tooltip').length) {
     $('.tooltip').tooltipster({
@@ -148,5 +171,28 @@ $(document).ready(function () {
     var parts = value.toString().split('.');
     return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, decimal) + (parts[1] ? thousand + parts[1] : '');
   }
+
+  // Скрыть определенное кол-во пунктов списка и показывать при нажатии на кнопку "показать больше"
+  // data-valueItem="" - количество элементов которыеы нужно показывать
+  function hideListItems() {
+    $('.hide-list-items').each(function () {
+      var $this = $(this),
+          items = $this.find('li'),
+          btnAll = $this.find('.hide-list-all'),
+          valueItem = $this.data('value'),
+          itemTarget = items.filter(function () {
+            return $(this).index() > valueItem
+          });
+      if ((items.length + 1) > valueItem) {
+        itemTarget.hide();
+        btnAll.show();
+        btnAll.on('click', function () {
+          itemTarget.show();
+          btnAll.hide();
+        })
+      }
+    })
+  }
+  hideListItems();
 
 });

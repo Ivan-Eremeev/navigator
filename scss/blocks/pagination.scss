@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  a, span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #b7b7b7;
+    color: #999;
+  }
+  a {
+    transition: 0.3s;
+    &:hover {
+      color: #000;
+      border-color: #000;
+      svg {
+        fill: #000;
+      }
+    }
+    &.active {
+      border-color: $orange;
+      color: #000;
+    }
+  }
+  &__prev {
+    border: none !important;
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  &__next {
+    border: none !important;
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+  svg {
+    width: 12px;
+    height: 12px;
+    fill: #999;
+    transition: 0.3s;
+  }
+}

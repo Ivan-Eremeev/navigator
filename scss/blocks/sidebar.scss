@@ -1,0 +1,56 @@
+.sidebar {
+  padding-top: 23px;
+  font-weight: 600;
+  &__block{
+    margin-bottom: 64px;
+  }
+  &__title {
+    color: $orange;
+    margin-bottom: 5px;
+  }
+  &__list {
+    font-size: 11px;
+    line-height: 22px;
+    li {
+      margin: 2px 0;
+    }
+    a {
+      transition: 0.2s;
+      sup {
+        font-size: 9px;
+        color: #999;
+        margin-left: 5px;
+      }
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  &__all {
+    display: none;
+    span {
+      position: relative;
+      padding-right: 20px;
+      color: #999;
+      transition: 0.2s;
+      &:after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 257.56 451.84'%3E%3Cpath class='st0' d='M0,225.92C0,217.82 3.09,209.72 9.26,203.55L203.55,9.26C215.9,-3.08 235.94,-3.08 248.3,9.26C260.65,21.62 260.65,41.65 248.3,54.01L76.38,225.92L248.29,397.82C260.64,410.18 260.64,430.21 248.29,442.57C235.94,454.93 215.9,454.93 203.54,442.57L9.25,248.29C3.08,242.11 0,234.01 0,225.92' fill='%23999'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 6px;
+        right: 0;
+      }
+      &:hover {
+        cursor: pointer;
+        user-select: none;
+        color: $orange;
+      }
+    }
+  }
+}

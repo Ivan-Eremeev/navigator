@@ -1,0 +1,28 @@
+.catalog-section {
+  margin-bottom: 50px;
+  .row {
+    margin-bottom: 30px;
+  }
+  &__col {
+    @include col(3);
+    @include col-sm(4);
+    @include col-xs(6);
+    margin-bottom: 20px;
+  }
+  .link-orange {
+    margin-bottom: 50px;
+    svg {
+      fill: #fd8238;
+    }
+    &:hover {
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    &__col {
+      width: 100%;
+    }
+  }
+}

@@ -105,3 +105,46 @@
 .recommendation__links {
   align-items: stretch !important;
 }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  top: -9.5px;
+  cursor: pointer;
+  &:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $orange;
+  }
+  outline: none;
+  @media (max-width: $break_sm) {
+    width: 34px;
+    height: 34px;
+    top: -16.5px;
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.jquery-slider__slider {
+  height: 1px;
+  border: none !important;
+  background-color: #636363;
+  @media (max-width: $break_sm) {
+    height: 4px;
+  }
+}
+.ui-slider-range {
+  background: $orange;
+  height: 1px;
+}

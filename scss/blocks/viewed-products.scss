@@ -1,7 +1,7 @@
 .viewed-products {
   margin-bottom: 50px;
   .title {
-    
+    margin-bottom: 72px;
   }
   &__slider {
 
@@ -29,6 +29,31 @@
     }
     &:hover {
       color: $orange;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &__button-prev {
+      left: -18px;
+    }
+    &__button-next {
+      right: -18px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__button-prev {
+      left: -15px;
+      &:after {
+        font-size: 25px;
+      }
+    }
+    &__button-next {
+      right: -15px;
+      &:after {
+        font-size: 25px;
+      }
+    }
+    .recommendation__text {
+      padding-left: 0;
     }
   }
 }

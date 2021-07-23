@@ -173,20 +173,22 @@ $(document).ready(function () {
   }
 
   // Скрыть определенное кол-во пунктов списка и показывать при нажатии на кнопку "показать больше"
-  // data-valueItem="" - количество элементов которыеы нужно показывать
+  // Добавить класс списку .js-hide-list-items
+  // и data-valueItem="" - количество элементов которыеы нужно показывать
+  // Добавить пункт в конец списка с классом .js-hide-list-all (будет открывать список)
   function hideListItems() {
-    $('.hide-list-items').each(function () {
+    $('.js-hide-list-items').each(function () {
       var $this = $(this),
           items = $this.find('li'),
-          btnAll = $this.find('.hide-list-all'),
+          btnAll = $this.find('.js-hide-list-all'),
           valueItem = $this.data('value'),
           itemTarget = items.filter(function () {
             return $(this).index() > valueItem
           });
-      if ((items.length + 1) > valueItem) {
+      if ((items.length + 1) > valueItem) { // если кол-во элементов превышает указанное в data-valueItem="", то скрываем остальные
         itemTarget.hide();
         btnAll.show();
-        btnAll.on('click', function () {
+        btnAll.on('click', function () { // клик по кнопке "показать еще" (появляются все скрытые пункты списка)
           itemTarget.show();
           btnAll.hide();
         })
@@ -194,5 +196,105 @@ $(document).ready(function () {
     })
   }
   hideListItems();
+
+  // Выпадайки при клике по кнопке
+  // Задать блокам выпадайкам .js-drop и айдишник совпадающий с data-drop="" в кнопке для этого блока
+  // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+  function DropBlock(drop, button) {
+    button.on('click', function () { // клик по кнопке
+      var $this = $(this),
+          data = $this.data('drop');
+      if (!$this.hasClass('active')) { // если имеет класс .active скрываем все выпадайки и открываем только относящуюся к кнопке
+        drop.removeClass('open');
+        button.removeClass('active');
+        $this.addClass('active');
+        $('#' + data).addClass('open');
+      } else { // если не имеет класс .active скрываем все выпадайки
+        button.removeClass('active');
+        drop.removeClass('open');
+      }
+    })
+    $(document).mouseup(function (e) { // клик по любому месту страницы вне блока (скрываем все выпадайки)
+      if (!drop.is(e.target)
+        && drop.has(e.target).length === 0 
+        && !button.is(e.target) 
+        && button.has(e.target).length === 0) {
+        drop.removeClass('open');
+        button.removeClass('active');
+      }
+    });
+  }
+  DropBlock($('.js-drop'), $('.js-drop-btn'));
+  DropBlock($('.js-filters-mobmenu'), $('.js-filters__btn-mob'));
+  
+  // JQuery Slider // Ползунок
+  function JQuerySlider() {
+    if ($('.jquery-slider').length) {
+      $('.jquery-slider').each(function () {
+        var $this = $(this),
+            JQuerySlider = $this.find('.jquery-slider__slider'),
+            input = $this.find('input'),
+            valMin = $this.data('min'),
+            valMax = $this.data('max'),
+            valNow = $this.data('now');
+        JQuerySlider.slider({
+          range: "min",
+          min: valMin,
+          max: valMax,
+          value: valNow,
+          create: function () {
+            input.val($(this).slider("value"));
+          },
+          slide: function(event, ui) {
+            input.val(ui.value);
+          },
+        });
+        input.on('input keyup', (function () {
+          var valInput = $(this).val();
+          JQuerySlider.slider("value", valInput);
+        }));
+      })
+    }
+  }
+  JQuerySlider();
+
+  // JQueryScrollbar
+  if ($('.scrollbar-inner').length) {
+    $('.scrollbar-inner').each(function () {
+      $(this).scrollbar();
+    })
+  }
+
+  // Отслеживание пункта "выбрать все" в фильтрах
+  function selectAll($this) {
+    var checkboxes = $this.parent().siblings('.filters__drop-row').find('input');
+    $this.on('change', function () {
+      if ($this.prop('checked')) {
+        checkboxes.prop('checked', true);
+      }else {
+        checkboxes.prop('checked', false);
+      }
+    })
+  }
+  selectAll($('#color_all'));
+  selectAll($('#material_all'));
+
+  // Работа селекта в фильтрах
+  function select() {
+    var block = $('.filters__method'),
+        trigger = block.find('.filters__picker'),
+        drop = block.find('.filters__drop--picker'),
+        radio = drop.find('input');
+    console.log(trigger, radio);
+    radio.on('change', function () {
+      var $this = $(this);
+      trigger.removeClass('active');
+      drop.removeClass('open');
+      radio.parent().show();
+      $this.parent().hide();
+      trigger.text($this.next().text());
+    })
+  }
+  select();
 
 });

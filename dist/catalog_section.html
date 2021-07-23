@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.css">
 
+  <link rel="stylesheet" href="css/libs/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
+
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -28,7 +31,7 @@
             <aside class="sidebar">
               <div class="sidebar__block">
                 <div class="sidebar__title">Электроника</div>
-                <ul class="sidebar__list hide-list-items" data-value="9">
+                <ul class="sidebar__list js-hide-list-items" data-value="9">
                   <li><a href="#">Внешние аккумуляторы<sup>300</sup></a></li>
                   <li><a href="#">Зарядные устройства и адаптеры<sup>10</sup></a></li>
                   <li><a href="#">Техника для дома и офиса<sup>240</sup></a></li>
@@ -47,7 +50,7 @@
                   <li><a href="#">Наушники<sup>487</sup></a></li>
                   <li><a href="#">Вентиляторы<sup>312</sup></a></li>
                   <li><a href="#">Фитнес-браслеты и трекеры<sup>15</sup></a></li>
-                  <li class="sidebar__all hide-list-all"><span>Показать все</span></li>
+                  <li class="sidebar__all js-hide-list-all"><span>Показать все</span></li>
                 </ul>
               </div>
               <div class="sidebar__block">
@@ -98,7 +101,9 @@
             <!-- /title -->
             <!-- filters -->
             <form action="#" class="filters">
-              <div class="filters__row">
+              <div class="filters__btn-mob js-filters__btn-mob" data-drop="filters_mobmenu">Фильтры</div>
+              <div id="filters_mobmenu" class="filters__row js-filters-mobmenu">
+                <div class="filters__close js-filters__btn-mob"></div>
                 <div class="filters__col">
                   <div class="filters__switch">
                     <input id="switch" type="checkbox">
@@ -109,34 +114,236 @@
                 <div class="filters__col">
                   <div class="filters__menu">
                     <div class="filters__item">
-                      <div class="filters__link">Цена</div>
-                      <div class="filters__drop">
-                        
+                      <div class="filters__link js-drop-btn" data-drop="drop_filter_1">Цена</div>
+                      <div id="drop_filter_1" class="filters__drop js-drop">
+                        <p>Минимальная цена, руб.</p>
+                        <div class="jquery-slider" data-min="0" data-max="1500" data-now="0">
+                          <div class="jquery-slider__slider"></div>
+                          <div class="filters__input">
+                            <input type="text">
+                          </div>
+                        </div>
+                        <p>Максимальная цена, руб.</p>
+                        <div class="jquery-slider" data-min="0" data-max="1500" data-now="1500">
+                          <div class="jquery-slider__slider"></div>
+                          <div class="filters__row-half">
+                            <div class="filters__input">
+                              <input type="text">
+                            </div>
+                            <span>Очистить все</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="filters__item">
-                      <div class="filters__link">Наличие</div>
-                      <div class="filters__drop">
-                        
+                      <div class="filters__link js-drop-btn" data-drop="drop_filter_2">Наличие</div>
+                      <div id="drop_filter_2" class="filters__drop js-drop">
+                        <p>От, шт.</p>
+                        <div class="jquery-slider" data-min="0" data-max="1000" data-now="0">
+                          <div class="jquery-slider__slider"></div>
+                          <div class="filters__input">
+                            <input type="text">
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="filters__item">
-                      <div class="filters__link">Цвет</div>
-                      <div class="filters__drop">
-                        
+                      <div class="filters__link js-drop-btn" data-drop="drop_filter_3">Цвет</div>
+                      <div id="drop_filter_3" class="filters__drop js-drop">
+                        <div class="filters__scroll scrollbar-inner">
+                          <div class="filters__drop-row">
+                            <input id="color_all" type="checkbox">
+                            <label class="filters__checkbox" for="color_all"></label>
+                            <label class="filters__textlabel" for="color_all">Выбрать все</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_1" type="checkbox">
+                            <label class="filters__checkbox" for="color_1"></label>
+                            <label class="filters__textlabel" for="color_1">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_2" type="checkbox">
+                            <label class="filters__checkbox" for="color_2"></label>
+                            <label class="filters__textlabel" for="color_2">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_3" type="checkbox">
+                            <label class="filters__checkbox" for="color_3"></label>
+                            <label class="filters__textlabel" for="color_3">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_4" type="checkbox">
+                            <label class="filters__checkbox" for="color_4"></label>
+                            <label class="filters__textlabel" for="color_4">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_5" type="checkbox">
+                            <label class="filters__checkbox" for="color_5"></label>
+                            <label class="filters__textlabel" for="color_5">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_6" type="checkbox">
+                            <label class="filters__checkbox" for="color_6"></label>
+                            <label class="filters__textlabel" for="color_6">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_7" type="checkbox">
+                            <label class="filters__checkbox" for="color_7"></label>
+                            <label class="filters__textlabel" for="color_7">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_8" type="checkbox">
+                            <label class="filters__checkbox" for="color_8"></label>
+                            <label class="filters__textlabel" for="color_8">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_9" type="checkbox">
+                            <label class="filters__checkbox" for="color_9"></label>
+                            <label class="filters__textlabel" for="color_9">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_10" type="checkbox">
+                            <label class="filters__checkbox" for="color_10"></label>
+                            <label class="filters__textlabel" for="color_10">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_11" type="checkbox">
+                            <label class="filters__checkbox" for="color_11"></label>
+                            <label class="filters__textlabel" for="color_11">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_12" type="checkbox">
+                            <label class="filters__checkbox" for="color_12"></label>
+                            <label class="filters__textlabel" for="color_12">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_13" type="checkbox">
+                            <label class="filters__checkbox" for="color_13"></label>
+                            <label class="filters__textlabel" for="color_13">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_14" type="checkbox">
+                            <label class="filters__checkbox" for="color_14"></label>
+                            <label class="filters__textlabel" for="color_14">Цвет</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="color_15" type="checkbox">
+                            <label class="filters__checkbox" for="color_15"></label>
+                            <label class="filters__textlabel" for="color_15">Цвет</label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="filters__item">
-                      <div class="filters__link">Материал</div>
-                      <div class="filters__drop">
-                        
+                      <div class="filters__link js-drop-btn" data-drop="drop_filter_4">Материал</div>
+                      <div id="drop_filter_4" class="filters__drop js-drop">
+                        <div class="filters__scroll scrollbar-inner">
+                          <div class="filters__drop-row">
+                            <input id="material_all" type="checkbox">
+                            <label class="filters__checkbox" for="material_all"></label>
+                            <label class="filters__textlabel" for="material_all">Выбрать все</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_1" type="checkbox">
+                            <label class="filters__checkbox" for="material_1"></label>
+                            <label class="filters__textlabel" for="material_1">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_2" type="checkbox">
+                            <label class="filters__checkbox" for="material_2"></label>
+                            <label class="filters__textlabel" for="material_2">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_3" type="checkbox">
+                            <label class="filters__checkbox" for="material_3"></label>
+                            <label class="filters__textlabel" for="material_3">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_4" type="checkbox">
+                            <label class="filters__checkbox" for="material_4"></label>
+                            <label class="filters__textlabel" for="material_4">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_5" type="checkbox">
+                            <label class="filters__checkbox" for="material_5"></label>
+                            <label class="filters__textlabel" for="material_5">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_6" type="checkbox">
+                            <label class="filters__checkbox" for="material_6"></label>
+                            <label class="filters__textlabel" for="material_6">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_7" type="checkbox">
+                            <label class="filters__checkbox" for="material_7"></label>
+                            <label class="filters__textlabel" for="material_7">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_8" type="checkbox">
+                            <label class="filters__checkbox" for="material_8"></label>
+                            <label class="filters__textlabel" for="material_8">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_9" type="checkbox">
+                            <label class="filters__checkbox" for="material_9"></label>
+                            <label class="filters__textlabel" for="material_9">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_10" type="checkbox">
+                            <label class="filters__checkbox" for="material_10"></label>
+                            <label class="filters__textlabel" for="material_10">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_11" type="checkbox">
+                            <label class="filters__checkbox" for="material_11"></label>
+                            <label class="filters__textlabel" for="material_11">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_12" type="checkbox">
+                            <label class="filters__checkbox" for="material_12"></label>
+                            <label class="filters__textlabel" for="material_12">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_13" type="checkbox">
+                            <label class="filters__checkbox" for="material_13"></label>
+                            <label class="filters__textlabel" for="material_13">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_14" type="checkbox">
+                            <label class="filters__checkbox" for="material_14"></label>
+                            <label class="filters__textlabel" for="material_14">Материал</label>
+                          </div>
+                          <div class="filters__drop-row">
+                            <input id="material_15" type="checkbox">
+                            <label class="filters__checkbox" for="material_15"></label>
+                            <label class="filters__textlabel" for="material_15">Материал</label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="filters__col">
                   <div class="filters__method">
-                    <div class="filters__link">Сначала дешевле</div>
+                    <div class="filters__link filters__picker js-drop-btn" data-drop="picker">Сначала дешевле</div>
+                    <div id="picker" class="filters__drop filters__drop--picker js-drop">
+                      <div class="filters__drop-row">
+                        <input id="picker_1" type="radio" name="picker">
+                        <label class="filters__textlabel" for="picker_1">Сначала дороже</label>
+                      </div>
+                      <div class="filters__drop-row">
+                        <input id="picker_2" type="radio" name="picker">
+                        <label class="filters__textlabel" for="picker_2">Сначала популярное</label>
+                      </div>
+                      <div class="filters__drop-row">
+                        <input id="picker_3" type="radio" name="picker">
+                        <label class="filters__textlabel" for="picker_3">Сначала новинки</label>
+                      </div>
+                      <div class="filters__drop-row hide">
+                        <input id="picker_4" type="radio" name="picker">
+                        <label class="filters__textlabel" for="picker_4">Сначала дешевле</label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -730,6 +937,9 @@
   <script src="https://unpkg.com/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.umd.js"></script>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/libs/jquery.scrollbar.min.js"></script>
+  <script src="js/libs/jquery-ui.min.js"></script>
+  <script src="js/libs/jquery.ui.touch-punch.min.js"></script>
 
   <script src="js/scripts.js"></script>
 </body>

@@ -1,16 +1,15 @@
 .catalog-section {
   margin-bottom: 50px;
   .row {
-    margin-bottom: 30px;
   }
   &__col {
     @include col(3);
     @include col-sm(4);
     @include col-xs(6);
-    margin-bottom: 20px;
+    margin-bottom: 62px;
   }
   .link-orange {
-    margin-bottom: 50px;
+    margin-bottom: 58px;
     svg {
       fill: #fd8238;
     }
@@ -18,6 +17,11 @@
       svg {
         fill: #fff;
       }
+    }
+  }
+  @media (max-width: $break_sm) {
+    .recommendation__text {
+      padding-left: 0;
     }
   }
   @media (max-width: 370px) {

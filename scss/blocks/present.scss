@@ -11,7 +11,6 @@
   &__row {
     position: relative;
     &--1 {
-      background-color: #000;
       color: #5F5F5F;
       .present__content {
         margin-left: auto;
@@ -22,7 +21,8 @@
         }
       }
       .present__img {
-        width: 70%;
+        width: 82%;
+        max-width: 1050px;
         left: 0;
       }
     }
@@ -36,6 +36,8 @@
         }
       }
       .present__img {
+        width: 50%;
+        max-width: 640px;
         right: 0;
       }
     }
@@ -51,8 +53,10 @@
         }
       }
       .present__img {
+        width: 56%;
+        max-width: 716px;
         bottom: auto;
-        top: -100px;
+        top: -50px;
         left: 0;
       }
     }
@@ -66,10 +70,12 @@
         }
       }
       .present__img {
-        width: 48%;
-        bottom: auto;
         top: 0;
         right: 0;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -104,28 +110,24 @@
     }
   }
   &__img {
-    width: 40%;
     position: absolute;
     bottom: 0;
     img {
       display: block;
     }
   }
-  @media (max-width: $break_xl) {
+  @media (max-width: $break_lg) {
     &__content {
       padding: 120px 0;
     }
   }
-  @media (max-width: $break_lg) {
+  @media (max-width: $break_md) {
     &__row {
-      &--3 {
+      &--4 {
         .present__img {
-          top: -50px;
+          right: -200px;
         }
       }
-    }
-    &__content {
-      padding: 50px 0;
     }
   }
   @media (max-width: $break_sm) {
@@ -135,6 +137,13 @@
           top: -20px;
         }
       }
+      &--4 {
+        
+      }
+    }
+    &__content {
+      max-width: 200px;
+      padding: 80px 0;
     }
     &__num {
       width: 60px; 
@@ -152,26 +161,53 @@
   }
   @media (max-width: $break_xs) {
     &__row {
+      padding: 50% 0 50px;
       &--1 {
-        background-color: #fff;
+        .present__img {
+          width: 170%;
+        }
         .present__content {
           margin-left: 0;
         }
       }
       &--2 {
-        
+        .present__img {
+          width: 100%;
+        }
+        .present__text {
+          color: #5F5F5F;
+          h2 {
+            color: #5F5F5F;
+          }
+        }
       }
       &--3 {
+        .present__img {
+          width: 100%;
+          top: auto;
+          bottom: 0;
+        }
         .present__content {
           margin-left: 0;
         }
       }
       &--4 {
-        
+        .present__img {
+          right: 0;
+        }
+        .present__text {
+          color: #5F5F5F;
+          h2 {
+            color: #5F5F5F;
+          }
+        }
       }
     }
-    &__img {
-      display: none;
+    &__content {
+      max-width: 300px;
+      padding: 20px;
+      background-color: rgba(204,204,204,.7);
+      border-radius: 3px;
     }
   }
 }

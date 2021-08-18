@@ -22,11 +22,10 @@
   }
   @media (max-width: $break_xs) {
     &__content {
-      max-width: 270px;
       padding: 50px 0 70px;
       margin-left: 0;
       h1 {
-        font-size: 20px;
+        font-size: 28px;
       }
     }
   }

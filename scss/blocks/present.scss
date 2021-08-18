@@ -36,8 +36,8 @@
         }
       }
       .present__img {
-        width: 50%;
-        max-width: 640px;
+        width: 53%;
+        max-width: 680px;
         right: 0;
       }
     }
@@ -70,10 +70,12 @@
         }
       }
       .present__img {
+        width: 67%;
         top: 0;
         right: 0;
         img {
           height: 100%;
+          margin-left: auto;
           object-fit: cover;
         }
       }
@@ -110,6 +112,7 @@
     }
   }
   &__img {
+    display: inline-block;
     position: absolute;
     bottom: 0;
     img {
@@ -125,7 +128,6 @@
     &__row {
       &--4 {
         .present__img {
-          right: -200px;
         }
       }
     }
@@ -172,15 +174,21 @@
         .present__content {
           margin-left: 0;
         }
+        .present__text {
+          color: #000;
+          h2 {
+            color: #000;
+          }
+        }
       }
       &--2 {
         .present__img {
           width: 100%;
         }
         .present__text {
-          color: #5F5F5F;
+          color: #000;
           h2 {
-            color: #5F5F5F;
+            color: #000;
           }
         }
       }
@@ -196,24 +204,46 @@
         .present__content {
           margin-left: 0;
         }
+        .present__text {
+          color: #000;
+          h2 {
+            color: #000;
+          }
+        }
       }
       &--4 {
         .present__img {
+          width: 100%;
           right: 0;
         }
         .present__text {
-          color: #5F5F5F;
+          color: #000;
           h2 {
-            color: #5F5F5F;
+            color: #000;
           }
         }
       }
     }
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
     &__content {
       max-width: 300px;
       padding: 20px;
-      background-color: rgba(204,204,204,.7);
+      background-color: rgba(240,240,240,.6);
       border-radius: 3px;
+      text-align: center;
+    }
+    &__num {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+    &__text {
+      h2 {
+        text-align: center;
+      }
     }
   }
 }

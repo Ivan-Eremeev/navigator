@@ -2379,6 +2379,7 @@
   .welcomesection__content {
     padding: 50px 0 70px;
     margin-left: 0;
+    text-align: center;
   }
   .welcomesection__content h1 {
     font-size: 28px;
@@ -2423,8 +2424,8 @@
   color: #fff;
 }
 .present__row--2 .present__img {
-  width: 50%;
-  max-width: 640px;
+  width: 53%;
+  max-width: 680px;
   right: 0;
 }
 .present__row--3 {
@@ -2453,11 +2454,13 @@
   color: #fff;
 }
 .present__row--4 .present__img {
+  width: 67%;
   top: 0;
   right: 0;
 }
 .present__row--4 .present__img img {
   height: 100%;
+  margin-left: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2496,6 +2499,7 @@
   font-weight: 600;
 }
 .present__img {
+  display: inline-block;
   position: absolute;
   bottom: 0;
 }
@@ -2505,11 +2509,6 @@
 @media (max-width: 1200px) {
   .present__content {
     padding: 120px 0;
-  }
-}
-@media (max-width: 1050px) {
-  .present__row--4 .present__img {
-    right: -200px;
   }
 }
 @media (max-width: 769px) {
@@ -2539,14 +2538,20 @@
   .present__row--1 .present__content {
     margin-left: 0;
   }
+  .present__row--1 .present__text {
+    color: #000;
+  }
+  .present__row--1 .present__text h2 {
+    color: #000;
+  }
   .present__row--2 .present__img {
     width: 100%;
   }
   .present__row--2 .present__text {
-    color: #5F5F5F;
+    color: #000;
   }
   .present__row--2 .present__text h2 {
-    color: #5F5F5F;
+    color: #000;
   }
   .present__row--3 .present__img {
     width: 100%;
@@ -2560,19 +2565,43 @@
   .present__row--3 .present__content {
     margin-left: 0;
   }
+  .present__row--3 .present__text {
+    color: #000;
+  }
+  .present__row--3 .present__text h2 {
+    color: #000;
+  }
   .present__row--4 .present__img {
+    width: 100%;
     right: 0;
   }
   .present__row--4 .present__text {
-    color: #5F5F5F;
+    color: #000;
   }
   .present__row--4 .present__text h2 {
-    color: #5F5F5F;
+    color: #000;
+  }
+  .present__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .present__content {
     max-width: 300px;
     padding: 20px;
-    background-color: rgba(204, 204, 204, 0.7);
+    background-color: rgba(240, 240, 240, 0.6);
     border-radius: 3px;
+    text-align: center;
+  }
+  .present__num {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .present__text h2 {
+    text-align: center;
   }
 }

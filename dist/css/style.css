@@ -1863,6 +1863,194 @@ html .ui-button.ui-state-disabled:active:after {
   color: #fd8238;
 }
 
+.slogans {
+  padding: 90px 0 60px;
+  background-color: #F6F6F5;
+}
+
+.slogans .container {
+  max-width: 1130px;
+}
+
+.slogans__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -50px;
+}
+
+.slogans__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  padding-left: 50px;
+  margin-bottom: 30px;
+}
+
+.slogans__icon {
+  width: 80px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.slogans__text {
+  padding-top: 10px;
+}
+
+.welcomesection {
+  background-image: url(../img/wood_1.jpg);
+  background-size: cover;
+}
+
+.welcomesection__content {
+  max-width: 580px;
+  padding: 112px 0 188px;
+  margin-left: auto;
+}
+
+.welcomesection__content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.05;
+}
+
+.present__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: static;
+}
+
+.present__row {
+  position: relative;
+}
+
+.present__row--1 {
+  background-color: #000;
+  color: #5F5F5F;
+}
+
+.present__row--1 .present__content {
+  margin-left: auto;
+}
+
+.present__row--1 .present__text h2 {
+  color: #5F5F5F;
+}
+
+.present__row--1 .present__img {
+  width: 70%;
+  left: 0;
+}
+
+.present__row--2 {
+  background-image: url(../img/wood_2.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+.present__row--2 .present__text h2 {
+  color: #fff;
+}
+
+.present__row--2 .present__img {
+  right: 0;
+}
+
+.present__row--3 {
+  color: #5F5F5F;
+  z-index: 2;
+}
+
+.present__row--3 .present__content {
+  margin-left: auto;
+}
+
+.present__row--3 .present__text h2 {
+  color: #5F5F5F;
+}
+
+.present__row--3 .present__img {
+  bottom: auto;
+  top: -100px;
+  left: 0;
+}
+
+.present__row--4 {
+  background-image: url(../img/wood_2.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+.present__row--4 .present__text h2 {
+  color: #fff;
+}
+
+.present__row--4 .present__img {
+  width: 48%;
+  bottom: auto;
+  top: 0;
+  right: 0;
+}
+
+.present__content {
+  max-width: 300px;
+  padding: 200px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.present__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: #fd8238;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.present__text h2 {
+  font-size: 32px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.present__text p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.present__img {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+}
+
+.present__img img {
+  display: block;
+}
+
 @media (min-width: 770px) {
   .mobile-visible {
     display: none !important;
@@ -1872,6 +2060,12 @@ html .ui-button.ui-state-disabled:active:after {
 @media (min-width: 1051px) {
   .tab-visible {
     display: none !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .present__content {
+    padding: 120px 0;
   }
 }
 
@@ -1906,6 +2100,14 @@ html .ui-button.ui-state-disabled:active:after {
 
   .viewed-products__button-next {
     right: -18px;
+  }
+
+  .present__row--3 .present__img {
+    top: -50px;
+  }
+
+  .present__content {
+    padding: 50px 0;
   }
 }
 
@@ -2561,6 +2763,41 @@ html .ui-button.ui-state-disabled:active:after {
   .viewed-products .recommendation__text {
     padding-left: 0;
   }
+
+  .slogans {
+    padding: 50px 0 30px;
+  }
+
+  .slogans__col {
+    width: 100%;
+  }
+
+  .welcomesection__content {
+    max-width: 415px;
+    padding: 80px 0 90px;
+  }
+
+  .welcomesection__content h1 {
+    font-size: 30px;
+  }
+
+  .present__row--3 .present__img {
+    top: -20px;
+  }
+
+  .present__num {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .present__text h2 {
+    font-size: 28px;
+  }
+
+  .present__text p {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -2656,6 +2893,46 @@ html .ui-button.ui-state-disabled:active:after {
 
   .productscreen__parameters-col--2 {
     padding-left: 0;
+  }
+
+  .slogans__col {
+    margin-bottom: 20px;
+  }
+
+  .slogans__icon {
+    width: 40px;
+    margin-right: 20px;
+  }
+
+  .slogans__text {
+    padding-top: 0;
+    font-size: 12px;
+  }
+
+  .welcomesection__content {
+    max-width: 270px;
+    padding: 50px 0 70px;
+    margin-left: 0;
+  }
+
+  .welcomesection__content h1 {
+    font-size: 20px;
+  }
+
+  .present__row--1 {
+    background-color: #fff;
+  }
+
+  .present__row--1 .present__content {
+    margin-left: 0;
+  }
+
+  .present__row--3 .present__content {
+    margin-left: 0;
+  }
+
+  .present__img {
+    display: none;
   }
 }
 

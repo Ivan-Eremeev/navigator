@@ -285,7 +285,6 @@ $(document).ready(function () {
         trigger = block.find('.filters__picker'),
         drop = block.find('.filters__drop--picker'),
         radio = drop.find('input');
-    console.log(trigger, radio);
     radio.on('change', function () {
       var $this = $(this);
       trigger.removeClass('active');
@@ -296,5 +295,18 @@ $(document).ready(function () {
     })
   }
   select();
+
+  const sliderProjects = new Swiper(".projects__slider", {
+    slidesPerView: 4,
+    spaceBetween: 27,
+    loop: false,
+    navigation: { nextEl: ".projects__next", prevEl: ".projects__prev" },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      414: { slidesPerView: 2, spaceBetween: 15 },
+      767: { slidesPerView: 3 },
+      1023: { slidesPerView: 4, spaceBetween: 27 }
+    },
+  });
 
 });

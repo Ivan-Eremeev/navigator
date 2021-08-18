@@ -1,0 +1,45 @@
+.slogans {
+  padding: 90px 0 60px;
+  background-color: #F6F6F5;
+  .container {
+    max-width: 1130px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -50px;
+  }
+  &__col {
+    display: flex;
+    width: 50%;
+    padding-left: 50px;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    width: 80px;
+    flex-shrink: 0;
+    margin-right: 40px;
+  }
+  &__text {
+    padding-top: 10px;
+  }
+  @media (max-width: $break_sm) {
+    padding: 50px 0 30px;
+    &__col {
+      width: 100%;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__col {
+      margin-bottom: 20px;
+    }
+    &__icon {
+      width: 40px;
+      margin-right: 20px;
+    }
+    &__text {
+      padding-top: 0;
+      font-size: 12px;
+    }
+  }
+}
